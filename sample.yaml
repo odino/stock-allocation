@@ -1,0 +1,34 @@
+# This is what you currently
+# have invested
+portfolio:
+    TSLA: 1000
+    GOOG: 10000
+    BNDW: 2000
+    SPY:  5000
+
+# This is the cash amount you have
+# available to invest.
+surplus: 20000
+
+# This maps individual tickers
+# to an asset class or your own
+# pool. For example, you could decide
+# to dedicate 3% of your assets towards
+# green energy companies, so here you'd
+# list X green energy tickers and map
+# them to, say, a GREEN_ENERGY class.
+investment_map:
+    TSLA: BETS
+    GOOG: BETS
+    BNDW: BOND
+    SPY:  MARKET
+
+# This is how you'd like
+# to diversify your investments, by "class".
+# The amounts are percentages,
+# so 10 means 10% of your total
+# invested assets.
+ideal_allocation_percent:
+    BETS: 10
+    MARKET: 80
+    BOND: 10

@@ -1,7 +1,9 @@
 # stock-allocation
 
-This is a simple program I use when investing, as it
-simply eases the task of how to split my investments.
+This is a program I use when investing, as it
+simply eases the task of how figuring out how
+to split my investments based on my overall
+strategy.
 
 ## Installation & usage
 

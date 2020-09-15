@@ -69,5 +69,7 @@ for x in differences:
     if differences[x] < 0:
         allocations[x] = round(surplus * (ideal_allocation_percent[x] / subtotal), 2)
 
+print("These are your overall differences:")
+dump(differences)
 print("This is how you should invest:")
 dump(allocations)

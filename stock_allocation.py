@@ -15,6 +15,11 @@ with open(sys.argv[1]) as file:
     investment_map = data.get('investment_map')
     surplus = data.get('surplus')
 
+tickers = {}
+
+for x, y in investment_map.items():
+    tickers[y] = tickers.get(y, []) + [x]
+
 def dump(x):
     print(json.dumps(x, indent=4, sort_keys=True))
 
@@ -67,7 +72,7 @@ for x in differences:
 allocations = {}
 for x in differences:
     if differences[x] < 0:
-        allocations[x] = round(surplus * (ideal_allocation_percent[x] / subtotal), 2)
+        allocations[x] = f'{round(surplus * (ideal_allocation_percent[x] / subtotal), 2)} in {", ".join(tickers[x])}'
 
 print("These are your overall differences:")
 dump(differences)
